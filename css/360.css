@@ -1,0 +1,174 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* .section{
+    overflow: hidden;
+} */
+/* 第一屏 */
+.one{
+    padding-top: 60px;
+}
+.one .logo{
+    width: 251px;
+    height: 186px;
+    background: url(../images/logo.png);
+    margin: 0 auto;
+}
+.one .text{
+    margin-top: 70px;
+    text-align: center;
+}
+.one .text > img{
+    margin: 0 30px;
+    opacity: 0.2;
+    transition: margin 1s ,opacity 1s;
+}
+.one .intro{
+    width: 772px;
+    height: 49px;
+    background: url(../images/info_1.png);
+    margin: 40px auto;
+}
+.one.current .text>img{
+    margin: 0 5px;
+    opacity: 1;
+    transition:margin 1s ,opacity 1s;
+}
+/* 第二屏 */
+.two > div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.two .left{
+    width: 440px;
+    font-size: 0;
+}
+.left >img{
+    transition: transform 2s;
+}
+.left > img:nth-of-type(1){
+    transform:translate(10px,30px) rotate(-50deg);
+}
+.left > img:nth-of-type(2){
+    transform:translate(-20px,30px) rotate(20deg);
+}
+.left >img:nth-of-type(3){
+    transform:translate(200px,20px) rotate(-15deg);
+}
+.left >img:nth-of-type(4){
+    transform: translate(300px,-70px) rotate(230deg);
+}
+.left >img:nth-of-type(5){
+    transform:translate(19px,90px) rotate(280deg);
+}
+.left >img:nth-of-type(6){
+    transform:translate(239px,409px) rotate(333deg);
+}
+.left >img:nth-of-type(7){
+    transform:translate(12px,70px) rotate(280deg);
+}
+.left >img:nth-of-type(8){
+    transform:translate(215px,430px) rotate(303deg);
+}
+.left >img:nth-of-type(9){
+    transform:translate(129px,-70px) rotate(-200deg);
+}
+.two.current .left > img{
+    transform:none;
+}
+.right{
+    width: 635px;
+    height: 309px;
+    background: url("../images/info_2.png");
+}
+/* 第三屏 */
+.three{
+    position: relative;
+}
+.three .info{
+    width: 631px;
+    height: 278px;
+    background:url(../images/info_3.png);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-100%,-50%);
+}
+.circle{
+    width: 453px;
+    height: 449px;
+    background:url(../images/circle.png);
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform:translate(120%,-50%);
+}
+.rocket{
+    width: 203px;
+    height: 204px;
+    background:url(../images/rocket.png);
+    position: absolute;
+    left: -600px;
+    top: 650px;
+    transition: left 1s,top 1s;
+}
+.three.current .circle> .rocket{
+    top: 25%;
+    left: 25%;
+}
+/* 第四屏 */
+.four{
+    position: relative;
+}
+.four .search{
+    width: 529px;
+    height: 438px;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-100%,-50%);
+    overflow: hidden;
+}
+.four .search .searchBar{
+    width: 529px;
+    height: 66px;
+    background: url(../images/search.png);
+    transform: translateX(-100%);
+}
+.four .search .searchText{
+    width:0px;
+    height: 22px;
+    background: url(../images/key.png);
+    position: absolute;
+    top: 20px;
+    left:15px;
+}
+.four .search .searchResult{
+    width: 529px;
+    height: 0px;
+    background: url(../images/result.png);
+    margin-top: -12px;
+}
+.four .infor{
+    width: 621px;
+    height: 299px;
+    background: url(../images/info_4.png);
+    position: absolute;
+    top: 50%;
+    right:50%;
+    transform: translate(100%,-50%);
+}
+.four.current .search .searchBar{
+    transform: none;
+    transition: transform 1s;
+}
+.four.current .search .searchText{
+    width: 99px;
+    transition: width 1s 1s steps(5);
+}
+.four.current .search .searchResult{
+    height: 372px;
+    transition: height 1s 2s;
+}
